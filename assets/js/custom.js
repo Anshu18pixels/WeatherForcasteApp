@@ -14,11 +14,11 @@ async function getWeather() {
         if (response.ok) {
             displayWeather(data);
         } else {
-            document.getElementById('weatherInfo').innerHTML = `<p>${data.message}</p>`;
+            document.getElementById('weatherInfo').innerHTML = `<p style="color:red">${data.message}</p>`;
         }
     } catch (error) {
         console.error('Error fetching weather data:', error);
-        document.getElementById('weatherInfo').innerHTML = `<p>Error fetching weather data. Please try again later.</p>`;
+        document.getElementById('weatherInfo').innerHTML = `<p >Error fetching weather data. Please try again later.</p>`;
     }
 }
 
